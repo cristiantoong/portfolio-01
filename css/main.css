@@ -27,49 +27,70 @@
   /* ---------------------- Header -------------------------- */
   #header {
     width: 100%;
-    padding: 40px 0;
-    min-height: 67vh;
+    /* padding: 40px 0; */
+    position: relative;
+    min-height: 80vh;
   }
-  
-  nav {
+ 
+  #header nav {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+
+    
+  }
+
+  #header nav .main-nav{
     display: flex;
     justify-content: space-between;
-    position: sticky;
-  }
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem 10rem;
+    transition: all 0.3s linear;
+    }
   
-  nav .nav-menu a{
+  nav .main-nav .nav-menu a{
     margin-right: 50px;
     transition: all .3s ease-in-out;
   }
 
-  nav .nav-menu a:hover {
+  nav .main-nav .nav-menu a:hover {
     color: #898989;
     transition: all .3s ease-in-out;
   }
 
-  nav .nav-menu a:nth-child(2){
+  nav .main-nav .nav-menu a:nth-child(2){
     color: #898989;
     transition: all .3s ease-in-out;
   }
 
-  nav .nav-menu a:nth-child(3){
+  nav .main-nav .nav-menu a:nth-child(3){
     color: #898989;
   }
-  nav .nav-menu a:nth-child(4){
+  nav .main-nav .nav-menu a:nth-child(4){
     color: #898989;
   }
 
-  nav .nav-menu a:nth-child(2):hover{
+  nav .main-nav .nav-menu a:nth-child(2):hover{
     color: #343434;
   }
 
-  nav .nav-menu a:nth-child(3):hover{
+  nav .main-nav .nav-menu a:nth-child(3):hover{
     color: #343434;
   }
 
-  nav .nav-menu a:nth-child(4):hover{
+  nav .main-nav .nav-menu a:nth-child(4):hover{
     color: #343434;
   }
+
+  nav.black .main-nav {
+    padding: 1rem 2rem!important;
+  }
+  
 
   
 
@@ -84,14 +105,9 @@
     color: #fff;
   }
 
-  .main-header {
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-    min-height: 69vh;
-  }
+ 
   
-  .main-header .hero-title {
+  #header .hero-title {
     padding-bottom: 60px;
     width: 50%;
     position: absolute;
@@ -100,29 +116,29 @@
     
   }
 
-  .main-header .hero-title h1 {
+  #header .hero-title h1 {
     font-weight: 500;
-    font-size: 45px;
+    font-size: 50px;
     margin-bottom: 20px;
     letter-spacing: 3px;
     animation: moveToBottom .5s ease-out;
     backface-visibility: hidden;
   }
 
-  .main-header .hero-title p {
+  #header .hero-title p {
     animation: moveToBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
 
   }
 
    /* ------------- Mobile Button --------------- */
-   nav .menu-btn .bars{
+   #header nav .main-nav .menu-btn .bars{
     width: 40px;
     height: 3px;
      background: #343434;
      margin-bottom: 10px;
    }
-  nav .menu-btn {
+   #header nav .main-nav .menu-btn {
     font-weight: 700;
     color: #343434;
     display: flex;
@@ -140,10 +156,11 @@
     padding: 40px 0;
     position: absolute;
     top: 0;
+    left: 0;
     height: 69vh;
     width: 50%;
-    z-index: 99;
-    transform: translate3d(-100%, 0, 0);
+    z-index: 90;
+    transform: translate3d(-150%, 0, 0);
     transition: all .4s ease-in-out;
     -webkit-box-shadow: 2px 0px 78px -15px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 0px 78px -15px rgba(0,0,0,0.75);
@@ -654,6 +671,10 @@
 
 
 @media screen and (max-width: 960px) {
+
+  nav .main-nav {
+    padding: 1rem 4rem!important;
+  }
   .scrollToTop {
     right: 60px;
     bottom: 10px;
@@ -662,7 +683,7 @@
   nav {
     width: 100%!important;
   }
-  .main-header {
+  #header {
     width: 100%;
   }
 
@@ -681,10 +702,10 @@
     width: 100%;
   }
 
-  .main-header .hero-title h1{
+  #header .hero-title h1{
     font-size: 35px;
   }
-  .main-header .hero-title p{
+  #header .hero-title p{
     font-size: 16px;
   }
 
@@ -790,6 +811,10 @@
 }
 
 @media only screen and (max-width: 767px) {
+
+  nav .main-nav {
+    padding: 1rem 4rem!important;
+  }
   p {
     font-size: 14px!important;
   }
@@ -800,13 +825,10 @@
     width: 100%;
   }
 
-  .main-header {
-    width: 100%
-  }
-  .main-header .hero-title h1{
+  #header .hero-title h1{
     font-size: 30px;
   }
-  .main-header .hero-title p{
+  #header .hero-title p{
     font-size: 14px;
   }
   .nav-menu {
@@ -824,7 +846,9 @@
     width: 100%;
   }
 
-  nav .menu-btn {
+  #header nav .main-nav .menu-btn {
+      /* display: flex;
+      margin-right: 25px; */
       display: flex;
       margin-right: 25px;
   }
@@ -906,21 +930,21 @@
 
 @media screen and (max-width: 1270px) {
 
-  .main-header nav {
+  #header nav {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 1140px) {
 
-  .main-header nav {
+  #header nav {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 1008px) {
 
-  .main-header nav {
+  #header nav {
     width: 100%;
   }
 }
