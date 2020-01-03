@@ -259,6 +259,13 @@
     animation-fill-mode: backwards;
   }
 
+  .project-06 {
+    width: 460px;
+    height: 100%; 
+    animation: moveToBottom .5s ease-out 1.2s;
+    animation-fill-mode: backwards;
+  }
+
   
 
 
@@ -276,8 +283,16 @@
     overflow: hidden;
   }
 
-
   .portfolios .portfolio-img .portfolio-02 {
+    background: url(../img/photography-site.png) center center/cover no-repeat;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+
+  .portfolios .portfolio-img .portfolio-03 {
     background: url(../img/shevi.jpg) center/cover no-repeat;
     transition: all .5s ease-in-out;
     width: 100%;
@@ -286,7 +301,7 @@
   }
   
 
-  .portfolios .portfolio-img .portfolio-03 {
+  .portfolios .portfolio-img .portfolio-04 {
     background: url(../img/lucien2.jpg) center/cover no-repeat;
     transition: all .5s ease-in-out;
     width: 100%;
@@ -294,7 +309,7 @@
     overflow: hidden;
   }
 
-  .portfolios .portfolio-img .portfolio-04 {
+  .portfolios .portfolio-img .portfolio-05 {
     background: url(../img/html-email.PNG) center/cover no-repeat;
     transition: all .5s ease-in-out;
     width: 100%;
@@ -302,7 +317,7 @@
     overflow: hidden;
   }
 
-  .portfolios .portfolio-img .portfolio-05 {
+  .portfolios .portfolio-img .portfolio-06 {
     background: url(../img/cat_steel1.PNG) center/cover no-repeat;
     transition: all .5s ease-in-out;
     width: 100%;
@@ -322,17 +337,22 @@
     color: #898989;
     padding-top: 15px;
   }
+
   .project-03 .portfolio-desc {
     color: #898989;
     padding-top: 15px;
   }
-
   .project-04 .portfolio-desc {
     color: #898989;
     padding-top: 15px;
   }
 
   .project-05 .portfolio-desc {
+    color: #898989;
+    padding-top: 15px;
+  }
+
+  .project-06 .portfolio-desc {
     color: #898989;
     padding-top: 15px;
   }
@@ -360,6 +380,11 @@
   }
 
   .project-05 .portfolio-desc h2 {
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .project-06 .portfolio-desc h2 {
     font-size: 19px;
     font-weight: 400;
   }
@@ -393,7 +418,8 @@
   .portfolios .portfolio-03:hover {
     transition: all .5s ease-in-out;
     transform: scale(1.2);
-  
+    /* filter: none;
+      -webkit-filter: grayscale(0); */
   }
 
   .portfolios .portfolio-04:hover {
@@ -403,6 +429,12 @@
   }
 
   .portfolios .portfolio-05:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.2);
+  
+  }
+
+  .portfolios .portfolio-06:hover {
     transition: all .5s ease-in-out;
     transform: scale(1.2);
   
