@@ -445,7 +445,7 @@
 #about {
   background-image: linear-gradient(to right, #5a5a5a, #5a5a5a, #5a5a5a, #595959, #595959);
   min-height: 80vh;
-  padding-top: 120px; 
+  padding-top: 122px; 
   position: relative;
   width: 100%;
   padding-bottom: 122px;
@@ -459,6 +459,7 @@
   width: 200px;
   animation: loadFade .5s ease-out 1.8s;
   animation-fill-mode: backwards;
+  text-align: center;
 }
 
 
@@ -486,7 +487,7 @@
   letter-spacing: 2px;
 }
 .about-desc p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Playfair Display', serif;
   color: #CBCBCB;
   padding-top: 5px;
   font-size: 16px;
@@ -750,9 +751,8 @@
   }
 
   #portfolio .section-title {
-    top: 4%!important;
-    left: 37%!important;
-    padding-top: 20px;
+    position: static;
+    margin: 0 auto;
   }
   .portfolios .project-01{
     width: 100%;
@@ -784,6 +784,22 @@
     width: 100%;
   }
 
+  .portfolios .project-05{
+    width: 100%;
+    padding-top: 53px;
+  }
+  .portfolios .project-05 .portfolio-img{
+    width: 100%;
+  }
+
+  .portfolios .project-06{
+    width: 100%;
+    padding-top: 53px;
+  }
+  .portfolios .project-06 .portfolio-img{
+    width: 100%;
+  }
+
   .portfolios .project-01 .portfolio-desc{
     width: 100%;
     padding-left: 40px;
@@ -803,14 +819,25 @@
     padding-left: 40px;
   }
 
+  .portfolios .project-05 .portfolio-desc{
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .portfolios .project-06 .portfolio-desc{
+    width: 100%;
+    padding-left: 40px;
+  }
+
+
   #about {
     width: 100%;
   }
 
-  .about-title {
-    top: 5%!important;
-    left: 36%!important;
-  }
+  #about .section-title {
+    position: static;
+    margin: 0 auto;
+}
   .about-me {
     display: flex;
     flex-direction: column;
@@ -868,7 +895,8 @@
   }
 
   #portfolio .section-title {
-    left: 26%!important;
+    position: static;
+    margin: 0 auto;
   }
 
   nav {
@@ -895,9 +923,8 @@
   }
 
   #about .section-title {
-    top: 5%!important;
-    left: 34%!important;
-    padding-bottom: 146px;
+    position: static;
+    margin: 0 auto;
 }
 
 #contact {
@@ -931,28 +958,33 @@
 
 /* ----------------------- Other Media Queries---------------------- */ 
 
-@media screen and (max-width: 1620px) {
+@media screen and (max-width: 1700px) {
+  #about {
+    min-height: 80vh;
+    padding-top: 0rem; 
+  }
+
+
+  #about .section-title {
+    padding: 4rem 0;
+  }
+
+ 
   #portfolio .section-title {
-    left: 6%;
-    margin-top: -24px;
+    -webkit-transform: rotate(0);
+      position: static;
+      margin: 0 auto;
+      padding: 2rem 0rem;
   }
   #about .section-title {
-    left: 6%;
+    -webkit-transform: rotate(0);
+      position: static;
+      margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 1374px) {
-  #portfolio .section-title {
-    -webkit-transform: rotate(0);
-    top: 6%;
-    left: 44%;
 
-  }
-  #about .section-title {
-    -webkit-transform: rotate(0);
-    top: 6%;
-    left: 44%;
-  }
 
   #portfolio {
     padding: 63px 0;
@@ -980,4 +1012,62 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  #header {
+    min-height: 70vh;
+  }
+
+  #portfolio {
+    padding: 112px 0;
+  }
+  #about {
+    min-height: 55vh;
+}
+
+#contact {
+  min-height: 33vh;
+}
+}
+
+@media screen and (max-width: 414px) {
+  #header {
+    min-height: 80vh;
+}
+  #portfolio {
+    padding: 86px 0;
+  }
+  #portfolio .portfolio-title{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 375px){
+  #header {
+    min-height: 92vh;
+  }
+
+  #portfolio .portfolio-title {
+    position: static;
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (max-width: 320px){
+  #header {
+    min-height: ;
+  }
+  #header .hero-title h1{
+    font-size: 25px;
+  }
+  #header .hero-title p{
+    font-size: 12px;
+  }
+  
+
+}
+
+
+
 
